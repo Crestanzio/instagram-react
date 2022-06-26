@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import { useContext, useEffect, useState } from "react";
+import UserContext from "../../Context/user";
 import useUser from "../../Hooks/useUser";
 import { isUserFollowingProfile, toggleFollow } from "../../Services/firebase";
 import { DEFAULT_IMAGE_PATH } from '../../Constants/paths';
-import UserContext from "../../Context/user";
+import * as ROUTES from "../../Constants/routes";
 
 const Header = ({
   photosCount,
@@ -56,8 +57,8 @@ const Header = ({
       <div className="profile-icon-container">
         {profileUsername && (
           <img
-            src={`/images/avatars/${profileUsername}.jpg`}
-            onError={(event) => {event.target.src = DEFAULT_IMAGE_PATH;}}
+            src={`${ROUTES.RELATIVE_PATH}/images/avatars/${profileUsername}.jpg`}
+            onError={(event) => {event.target.src = `${ROUTES.RELATIVE_PATH}${DEFAULT_IMAGE_PATH}`;}}
             alt={fullName}
             className="profile-icon"
           />

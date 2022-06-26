@@ -5,6 +5,7 @@ import Image from "./Image";
 import Actions from "./Actions";
 import Footer from './Footer';
 import Comments from './Comments';
+import * as ROUTES from "../../Constants/routes";
 
 const Post = ({ content }) => {
   const commentInput = useRef(null);
@@ -14,7 +15,7 @@ const Post = ({ content }) => {
     <>
       <section className="post-container">
         <Header username={content.username} />
-        <Image src={content.imageSrc} caption={content.caption}  />
+        <Image src={`${ROUTES.RELATIVE_PATH}${content.imageSrc}`} caption={content.caption}  />
         <Actions
           docId={content.docId}
           totalLikes={content.likes.length}

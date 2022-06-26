@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import * as ROUTES from "../../Constants/routes";
 
 const Photos = ({ photos }) => {
 
@@ -10,7 +11,7 @@ const Photos = ({ photos }) => {
         ) : photos.length > 0 ? (
           photos.map((photo) => (
             <div key={photo.docId} className="post-image-container">
-              <img src={photo.imageSrc} alt={photo.caption} id="posts" />
+              <img src={`${ROUTES.RELATIVE_PATH}${photo.imageSrc}`} alt={photo.caption} id="posts" />
               <div className="post-info-container">
               <div className="post-info">
                 <p>

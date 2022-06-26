@@ -39,10 +39,10 @@ const Navbar = () => {
               <img src={require("../Assets/Images/Svg/Navbar/exploration-inactive.svg").default} alt="" />
               <img src={require("../Assets/Images/Svg/Navbar/activity-flow-inactive.svg").default} alt="" />
               {user.username && (
-                <Link to={`/${user.username}`}>
-                <img src={`/images/avatars/${user.username}.jpg`}
+                <Link to={`${ROUTES.DASHBOARD}${user.username}`}>
+                <img src={`${ROUTES.RELATIVE_PATH}/images/avatars/${user.username}.jpg`}
                      alt={`${user.username} profile`} 
-                     onError={(event) => {event.target.src = DEFAULT_IMAGE_PATH;}}
+                     onError={(event) => {event.target.src = `${ROUTES.RELATIVE_PATH}${DEFAULT_IMAGE_PATH}`;}}
                      className="icon-profile"
                      />
               </Link>

@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <UserContext.Provider value={{ user }}>
-        <Router>
+        <Router basename={ROUTES.RELATIVE_PATH}>
           <Suspense fallback={<Spinner />}>
             <Routes>
               <Route element={<ProtectedRoute.Login user={user} />}>

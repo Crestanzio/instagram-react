@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import * as ROUTES from "../../Constants/routes";
 
 const Header = ({ username }) => {
   return (
     <div className="top-post-menu">
       <div className="user-container">
-        <Link to={`/${username}`}>
+        <Link to={`${ROUTES.DASHBOARD}${username}`}>
           <img
-            src={`/images/avatars/${username}.jpg`}
+            src={`${ROUTES.RELATIVE_PATH}/images/avatars/${username}.jpg`}
             alt={`${username}`}
             className="post-user-icon"
           />

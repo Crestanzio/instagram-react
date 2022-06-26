@@ -1,7 +1,7 @@
-import { memo } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { DEFAULT_IMAGE_PATH } from '../../Constants/paths'
+import * as ROUTES from "../../Constants/routes";
 
 const User = ({ username, fullName }) => {
   return !username || !fullName ? (
@@ -10,12 +10,12 @@ const User = ({ username, fullName }) => {
     <>
       <div className="user-suggestion-wrapper">
         <div className="user-suggestion-container">
-          <Link to={`/${username}`}>
+          <Link to={`${ROUTES.DASHBOARD}${username}`}>
             <img
-              src={`/images/avatars/${username}.jpg`}
+              src={`${ROUTES.RELATIVE_PATH}/images/avatars/${username}.jpg`}
               className="suggestions-main-user-icon"
               alt={username}
-              onError={(event) => {event.target.src = DEFAULT_IMAGE_PATH;}}
+              onError={(event) => {event.target.src = `${ROUTES.RELATIVE_PATH}${DEFAULT_IMAGE_PATH}`;}}
             />
           </Link>
           <div className="username-container">
@@ -28,7 +28,7 @@ const User = ({ username, fullName }) => {
   );
 };
 
-export default memo(User);
+export default User;
 
 User.propTypes = {
   username: PropTypes.string,

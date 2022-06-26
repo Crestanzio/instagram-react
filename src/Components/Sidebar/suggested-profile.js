@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { updateLoggedInUserFollowing, updateFollowedUserFollowers } from '../../Services/firebase';
 import { DEFAULT_IMAGE_PATH } from '../../Constants/paths';
+import * as ROUTES from "../../Constants/routes";
 
 const SuggestedProfile = ({profileDocId, username, profileId, userId, loggenInUserDocId}) => {
   const [followed, setFollowed] = useState(false);
@@ -16,12 +17,12 @@ const SuggestedProfile = ({profileDocId, username, profileId, userId, loggenInUs
   return ! followed ? (
     <div className="user-suggestion-wrapper">
       <div className="user-suggestion-container">
-      <Link to={`/${username}`}>
+      <Link to={`${ROUTES.DASHBOARD}${username}`}>
         <img
-          src={`images/avatars/${username}.jpg`}
+          src={`${ROUTES.RELATIVE_PATH}/images/avatars/${username}.jpg`}
           className="suggestions-icon"
           alt={username}
-          onError={(event) => {event.target.src = DEFAULT_IMAGE_PATH;}}
+          onError={(event) => {event.target.src = `${ROUTES.RELATIVE_PATH}${DEFAULT_IMAGE_PATH}`;}}
         />
         </Link>
         <div className="username-container">

@@ -4,3 +4,4 @@ export const NEW_PASSWORD = '/new-password';
 export const DASHBOARD = '/';
 export const PROFILE = '/:username';
 export const NOT_FOUND = '/not-found';
+export const RELATIVE_PATH = '/instagram-react';
