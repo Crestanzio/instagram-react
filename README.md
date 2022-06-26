@@ -2,9 +2,9 @@
 
 [Instagram](https://crestanzio.github.io/instagram-react/)
 
-Login credentials for app or Signup,
-Username: k.xrhstos_test@gmail.com
-Password: 12345678
+Login credentials for app or Signup <br />
+Username: k.xrhstos_test@gmail.com <br />
+Password: 12345678 <br />
 
 # Features:
 
