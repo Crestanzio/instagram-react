@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkinstagram=self.webpackChunkinstagram||[]).push([[703],{3703:function(n,s,a){a.r(s),a.d(s,{default:function(){return r}});var e=a(184),r=function(){return(0,e.jsx)("div",{className:"loader",children:(0,e.jsx)("div",{className:"spinner"})})}}}]);
+//# sourceMappingURL=703.b7492f18.chunk.js.map
