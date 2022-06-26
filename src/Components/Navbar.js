@@ -13,7 +13,6 @@ const Navbar = () => {
   const { user } =useUser(loggedInUser?.uid)
 
   const navigate = useNavigate();
-  // console.log(user)
 
   const handleSignOut = () => {
     firebase.auth().signOut();
