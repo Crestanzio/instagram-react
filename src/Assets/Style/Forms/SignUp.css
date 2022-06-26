@@ -1,0 +1,114 @@
+.signup-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.signup-main-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Form */
+
+.form-container {
+  padding-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dedbdb;
+  border-radius: 3px;
+  width: 360px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#signup-logo {
+  padding: 30px 0px 15px;
+}
+
+.input-container {
+  position: relative;
+  margin-top: 15px;
+  width: 280px;
+}
+
+/* Input */
+
+input[name="username"],
+input[name="fullname"],
+input[name="email"],
+input[name="password"] {
+  width: 100%;
+  padding: 10px 20px 10px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fafafa;
+  margin: 3px;
+}
+
+input[name="username"]:focus-visible,
+input[name="fullname"]:focus-visible,
+input[name="email"]:focus-visible,
+input[name="password"]:focus-visible {
+  outline-style: outset;
+  outline-color: #00000081;
+}
+
+.input-container > button {
+  background-color: #0095f6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  padding: 5px;
+  margin: 15px 0px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container > button:disabled {
+  background-color: #0095f6;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  padding: 5px;
+  margin: 15px 0px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: initial;
+}
+
+.error-message {
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgb(243 60 60);
+}
+
+.redirect-login-box {
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid #dedbdb;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+
+  .redirect-login-box > h5 > a {
+    color: rgb(0,149,246);
+    font-weight: 600;
+  }

@@ -1,0 +1,212 @@
+.login-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.login-main-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Image */
+
+.main-image-background {
+  background-image: url("/src/Assets/Images/Login/login-baner-container.png");
+  width: 380px;
+  height: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 30px;
+}
+
+.holder-image-container {
+  position: relative;
+  bottom: 290px;
+  right: 295px;
+}
+
+.image-container {
+  position: absolute;
+  width: 250px;
+  height: 540px;
+  background-image: url("/src/Assets/Images/Login//login-baner-1.png");
+  background-repeat: no-repeat;
+  animation: swapImages 15s 2s linear infinite;
+}
+
+/* Form */
+
+.form-container {
+  padding-bottom: 40px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dedbdb;
+  border-radius: 3px;
+  width: 360px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#login-logo {
+  padding: 30px 0px 15px;
+}
+
+.input-container {
+  position: relative;
+  margin-top: 15px;
+  width: 280px;
+}
+
+/* Input */
+
+input[name="username"],
+input[name="password"] {
+  width: 100%;
+  padding: 10px 20px 10px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fafafa;
+  margin: 3px;
+}
+
+.input-container > button {
+  background-color: #0095f6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  padding: 5px;
+  margin: 15px 0px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container > button:disabled {
+  background-color: #0095f6;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  padding: 5px;
+  margin: 15px 0px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: initial;
+}
+
+label[for="username"] {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  color: #8e8e8e;
+  pointer-events: none;
+}
+
+label[for="password"] {
+  position: absolute;
+  top: 57px;
+  left: 14px;
+  color: #8e8e8e;
+  pointer-events: none;
+}
+
+.error-message {
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgb(243 60 60);
+}
+
+.line-container {
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.line-container > hr {
+  width: 110px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.line-container > h6 {
+  display: inline;
+  padding: 0px 20px;
+}
+
+.sign-up {
+  padding: 20px;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #dedbdb;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.sign-up > h5 > a {
+  color: rgb(0,149,246);
+  font-weight: 600;
+}
+
+/* ANIMATION */
+
+/* Image animation */
+
+@keyframes swapImages {
+  0% {
+    background-image: url("/src/Assets/Images/Login/login-baner-1.png");
+  }
+  8.33%,
+  25% {
+    background-image: url("/src/Assets/Images/Login/login-baner-2.png");
+  }
+  33.33%,
+  50% {
+    background-image: url("/src/Assets/Images/Login/login-baner-3.png");
+  }
+  58.33%,
+  75% {
+    background-image: url("/src/Assets/Images/Login/login-baner-4.png");
+  }
+  83.33%,
+  100% {
+    background-image: url("/src/Assets/Images/Login/login-baner-1.png");
+  }
+}
+
+/* Input animation */
+
+input[name="username"]:focus-visible,
+input[name="password"]:focus-visible {
+  outline-style: outset;
+  outline-color: #b7b8be54;
+}
+
+input[name="username"]:focus ~ label[for="username"],
+input[name="username"]:not(:focus):valid ~ label[for="username"] {
+  transform: scale(0.83333) translateY(-12px) translateX(-7px);
+  transition: transform ease-out 300ms;
+  font-size: 12px;
+}
+
+input[name="password"]:focus ~ label[for="password"],
+input[name="password"]:not(:focus):valid ~ label[for="password"] {
+  transform: scale(0.83333) translateY(-12px) translateX(-8px);
+  transition: transform ease-out 300ms;
+  font-size: 12px;
+}

@@ -1,0 +1,64 @@
+/* Hold the position of Suggestions sidebar with respect on the flexbox */
+
+.suggestions-wrapper {
+  padding-left: 20px;
+}
+
+/* Set the fixed position of sidebar only inside the .suggestions-wrapper */
+
+.suggestions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  position: fixed;
+  top: 100px;
+  right: 320px;
+  z-index: 1;
+
+}
+
+.user-suggestion-wrapper {
+  display: flex;
+  width: 325px;
+  justify-content: space-between;
+}
+
+.user-suggestion-container {
+  display: flex;
+  gap: 12px;
+}
+
+.username-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.suggestions-main-user-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+}
+
+.suggestions-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 30px;
+}
+
+.user-suggestion-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+#follow-button {
+  font-weight: 600;
+  background-color: #fff;
+  color: #4fb5f7;
+  border: none;
+  cursor: pointer;
+}
