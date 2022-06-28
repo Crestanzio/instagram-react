@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import * as ProtectedRoute from "./Helpers/protected.route";
 import * as ROUTES from "./Constants/routes";
 import UserContext from "./Context/user";
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <UserContext.Provider value={{ user }}>
-        <Router basename={ROUTES.RELATIVE_PATH}>
+        <HashRouter>
           <Suspense fallback={<Spinner />}>
             <Routes>
               <Route element={<ProtectedRoute.Login user={user} />}>
@@ -32,7 +32,7 @@ function App() {
               <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
             </Routes>
           </Suspense>
-        </Router>
+        </HashRouter>
       </UserContext.Provider>
     </div>
   );

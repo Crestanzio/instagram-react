@@ -13,7 +13,7 @@ const Post = ({ content }) => {
 
   return (
     <>
-      <section className="post-container">
+      <div className="post-container">
         <Header username={content.username} />
         <Image src={`${ROUTES.RELATIVE_PATH}${content.imageSrc}`} caption={content.caption}  />
         <Actions
@@ -29,7 +29,7 @@ const Post = ({ content }) => {
           posted={content.dateCreated}
           commentInput={commentInput}
         />
-      </section>
+      </div>
     </>
   );
 };

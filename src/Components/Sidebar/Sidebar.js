@@ -8,12 +8,10 @@ const Sidebar = () => {
   const { user: { docId = '', fullName, username, userId, following } = {} } = useContext(LoggedInUserContext);
 
   return (
-    <section className="suggestions-wrapper">
-      <div className="suggestions-container">
+      <section className="suggestions-container">
         <User username={username} fullName={fullName} />
         <Suggestions userId={userId} following={following} loggenInUserDocId={docId} />
-      </div>
-    </section>
+      </section>
   );
 };
 

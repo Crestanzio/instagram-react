@@ -9,11 +9,11 @@ const Timeline = () => {
   const { photos } = usePhotos(user);
 
   return (
-    <div className="post-wrapper">
+    <section className="post-wrapper">
       { photos ? (
         photos.map((content) => <Post key={content.docId} content={content} />)
       ) : null}
-    </div>
+    </section>
   );
 };
 

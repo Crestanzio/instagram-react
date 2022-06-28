@@ -66,11 +66,18 @@
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  padding-bottom: 10px;
 }
 
 .post-image-container {
   display: flex;
   flex-wrap: wrap;
+  max-width: 290px;
+}
+
+#posts {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .post-info-container {
@@ -101,10 +108,4 @@
 
 .post-image-container:hover > .post-info-container {
   display: flex;
-}
-
-#posts {
-  width: 290px;
-  object-fit: contain;
-  flex-shrink: 2;
 }

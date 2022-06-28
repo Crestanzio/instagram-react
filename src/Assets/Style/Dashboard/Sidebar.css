@@ -1,21 +1,10 @@
-/* Hold the position of Suggestions sidebar with respect on the flexbox */
-
-.suggestions-wrapper {
-  padding-left: 20px;
-}
-
-/* Set the fixed position of sidebar only inside the .suggestions-wrapper */
-
 .suggestions-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-self: flex-start;
   gap: 25px;
-  position: fixed;
-  top: 100px;
-  right: 320px;
-  z-index: 1;
-
+  padding: 2rem 0rem 0rem 1rem;
 }
 
 .user-suggestion-wrapper {
