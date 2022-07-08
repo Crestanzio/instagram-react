@@ -4,6 +4,7 @@ import { getUserPhotosByUsername, } from "../../Services/firebase";
 import Header from "./Header";
 import Photos from "./Photos";
 
+
 const UserProfile = ({ user }) => {
   const reducer = (state, newState) => ({ ...state, ...newState });
   const initialState = {

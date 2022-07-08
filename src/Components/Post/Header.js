@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../Constants/routes";
+import * as SVG from "../../Assets/Images/PostSvg";
 
 const Header = ({ username }) => {
   return (
@@ -15,10 +16,7 @@ const Header = ({ username }) => {
         </Link>
         <h5>{username}</h5>
       </div>
-      <img
-        src={require("../../Assets/Images/Svg/Posts/more-options.svg").default}
-        alt=""
-      />
+      <SVG.Options />
     </div>
   );
 };

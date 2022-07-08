@@ -5,6 +5,7 @@ import FirebaseContext from "../Context/firebase";
 import UserContext from "../Context/user";
 import useUser from "../Hooks/useUser";
 import { DEFAULT_IMAGE_PATH } from '../Constants/paths';
+import * as SVG from "../Assets/Images/NavbarSvg";
 import "../Assets/Style/Navbar.css";
 
 const Navbar = () => {
@@ -22,22 +23,21 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <Link to={ROUTES.DASHBOARD}>
-          <img src={require("../Assets/Images/logo.png")} alt="instagram" id="nav-logo" />
-        </Link>
-        <div className="items-wrapper">
+        <div id="logo-wrapper">
+          <img src={require("../Assets/Images/logo.png")} alt="instagram" id="nav-logo" onClick={() => navigate(ROUTES.DASHBOARD)} />
+          </div>
           {loggedInUser ? ( 
           <>
             <div className="input-wrapper">
               <input type="text" name="search" id="search" placeholder="Search" autoComplete="off" required />
-              <img src={require("../Assets/Images/Svg/Navbar/search.svg").default} className="search-icon" alt=""/>
+              <SVG.Search className="search-icon" />
             </div>
             <div className="icon-wrapper">
-              <img src={require("../Assets/Images/Svg/Navbar/home-inactive.svg").default} alt="" />
-              <img src={require("../Assets/Images/Svg/Navbar/direct-message-inactive.svg").default} alt="" />
-              <img src={require("../Assets/Images/Svg/Navbar/add-post-inactive.svg").default} alt="" />
-              <img src={require("../Assets/Images/Svg/Navbar/exploration-inactive.svg").default} alt="" />
-              <img src={require("../Assets/Images/Svg/Navbar/activity-flow-inactive.svg").default} alt="" />
+              <SVG.Home />
+              <SVG.DirectMessage />
+              <SVG.AddPost />
+              <SVG.Exploration />
+              <SVG.Flow />
               {user.username && (
                 <Link to={`${ROUTES.DASHBOARD}${user.username}`}>
                 <img src={`${ROUTES.RELATIVE_PATH}/images/avatars/${user.username}.jpg`}
@@ -54,7 +54,7 @@ const Navbar = () => {
           <>
             <div className="input-wrapper">
               <input type="text" name="search" id="search" placeholder="Search" autoComplete="off" required />
-              <img src={require("../Assets/Images/Svg/Navbar/search.svg").default} className="search-icon" alt=""/>
+              <SVG.Search className="search-icon" />
             </div>
             <div className="button-wrapper">
             <Link to={ROUTES.LOGIN}><button className="btn-login">Login</button></Link>
@@ -62,7 +62,6 @@ const Navbar = () => {
             </div>
           </>
           )}
-        </div>
       </nav>
     </header>
   );

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import FirebaseContext from "../../Context/firebase";
 import UserContext from "../../Context/user";
+import * as SVG from "../../Assets/Images/PostSvg";
 
 const AddComment = ({ docId, comments, setComments, commentInput }) => {
   const [comment, setComment] = useState("");
@@ -33,10 +34,7 @@ const AddComment = ({ docId, comments, setComments, commentInput }) => {
         comment.length >= 1 ? handleSubmitComment(event) : event.preventDefault
       }
     >
-      <img
-        src={require("../../Assets/Images/Svg/Posts/emoji-option.svg").default}
-        alt=""
-      />
+      <SVG.Emoji />
       <input
         type="text"
         name="add-comment"

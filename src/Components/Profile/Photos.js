@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import * as ROUTES from "../../Constants/routes";
+import * as SVG from "../../Assets/Images/PostSvg";
+
 
 const Photos = ({ photos }) => {
 
@@ -15,11 +17,11 @@ const Photos = ({ photos }) => {
               <div className="post-info-container">
               <div className="post-info">
                 <p>
-                  <img src={require("../../Assets/Images/Svg/Posts/likes-length.svg").default} alt=""/>
+                  <SVG.LikeLength />
                   {photo.likes.length}
                 </p>
                 <p>
-                  <img src={require("../../Assets/Images/Svg/Posts/comment-length.svg").default} alt=""/>
+                  <SVG.CommentLength />
                   {photo.comments.length}
               </p>
               </div>

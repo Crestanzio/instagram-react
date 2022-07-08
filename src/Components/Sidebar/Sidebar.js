@@ -5,13 +5,20 @@ import { useContext } from "react";
 import LoggedInUserContext from "../../Context/logged-in-user";
 
 const Sidebar = () => {
-  const { user: { docId = '', fullName, username, userId, following } = {} } = useContext(LoggedInUserContext);
+  const { user: { docId = "", fullName, username, userId, following } = {} } =
+    useContext(LoggedInUserContext);
 
   return (
+    <div className="suggestions-wrapper">
       <section className="suggestions-container">
         <User username={username} fullName={fullName} />
-        <Suggestions userId={userId} following={following} loggenInUserDocId={docId} />
+        <Suggestions
+          userId={userId}
+          following={following}
+          loggenInUserDocId={docId}
+        />
       </section>
+    </div>
   );
 };
 

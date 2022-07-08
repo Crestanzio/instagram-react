@@ -1,9 +1,7 @@
 .dashboard-wrapper {
   display: flex;
   align-items: center;
-  padding-top: 30px;
-  margin-top: 50px;
-  margin: 50px 22%;
+  margin: 80px 22%;
 }
 
 .post-wrapper {
@@ -60,10 +58,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-#actions-btn:hover {
-  cursor: pointer;
 }
 
 .likes-session {

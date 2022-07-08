@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useContext, useState } from "react";
 import FirebaseContext from "../../Context/firebase";
 import UserContext from "../../Context/user";
+import * as SVG from "../../Assets/Images/PostSvg";
 
 const Actions = ({ docId, totalLikes, likedPhoto, handleFocus }) => {
   const {
@@ -32,24 +33,14 @@ const Actions = ({ docId, totalLikes, likedPhoto, handleFocus }) => {
       <div className="bottom-post-icons">
         <div className="bottom-icons-container">
           {!toggleLiked ? (
-            <img src={require("../../Assets/Images/Svg/Posts/like-inactive.svg").default}
-              onClick={handleToggleLiked} alt="" id="actions-btn"
-            />
+            <SVG.LikeInactive cursor="pointer" onClick={handleToggleLiked} />
           ) : (
-            <img src={require("../../Assets/Images/Svg/Posts/like-active.svg").default}
-              onClick={handleToggleLiked} alt="" id="actions-btn"
-            />
+            <SVG.LikeActive cursor="pointer" onClick={handleToggleLiked} />
           )}
-          <img src={require("../../Assets/Images/Svg/Posts/comment.svg").default}
-            onClick={handleFocus} alt="" id="actions-btn"
-          />
-          <img src={require("../../Assets/Images/Svg/Posts/share.svg").default}
-            alt=""
-          />
+          <SVG.Comment cursor="pointer" onClick={handleFocus} />
+          <SVG.Share />
         </div>
-        <img src={require("../../Assets/Images/Svg/Posts/save.svg").default}
-          alt=""
-        />
+        <SVG.Save />
       </div>
       <div className="likes-session">
         <h5>{likes === 1 ? `${likes} like` : `${likes} likes`}</h5>
